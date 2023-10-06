@@ -1,0 +1,29 @@
+{
+  "project_info": {
+    "project_number": "445240699224",
+    "project_id": "themeremoteconfig",
+    "storage_bucket": "themeremoteconfig.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:445240699224:android:356288586a336882a75d2d",
+        "android_client_info": {
+          "package_name": "com.example.remoteconfig"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyCNUE4CEYEBSVl5l1yZn3zXldg9s0XaNEQ"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
