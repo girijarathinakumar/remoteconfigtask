@@ -7,7 +7,7 @@
   "client": [
     {
       "client_info": {
-        "mobilesdk_app_id": "1:445240699224:android:356288586a336882a75d2d",
+        "mobilesdk_app_id": "1:445240699224:android:8fd2cc01ccc93c1ea75d2d",
         "android_client_info": {
           "package_name": "com.example.remoteconfig"
         }
