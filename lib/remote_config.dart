@@ -10,7 +10,7 @@ class FirebaseRemoteConfigService {
   // String get fontSize => _remoteConfig.getString(FirebaseRemoteConfigKeys.fontSize);
   String get title => _remoteConfig.getString(FirebaseRemoteConfigKeys.title);
    String get image => _remoteConfig.getString(FirebaseRemoteConfigKeys.image);
-   String get remoteTextStyle => _remoteConfig.getString(FirebaseRemoteConfigKeys.remoteTextStyle.toString());
+   // String get textColor => _remoteConfig.getString(FirebaseRemoteConfigKeys.textColor);
   // String get defaultTextStyle => _remoteConfig.getString(FirebaseRemoteConfigKeys.defaultTextStyle.toString());
 
   static FirebaseRemoteConfigService? _instance;
@@ -49,16 +49,16 @@ class FirebaseRemoteConfigKeys {
   double fontSize = 20;
 
   static FirebaseRemoteConfig  remoteConfig = FirebaseRemoteConfig.instance;
-  static const String themeCode = 'theme_mode';static const String title = 'title';
+  static const String themeCode = 'theme_mode';
+  static const String title = 'title';
   static const String image = 'Image';
   static const String color = 'title_color';
 
-  static  TextStyle remoteTextStyle = TextStyle(
-    fontSize: remoteConfig.getDouble('font_size'),
-    color: Color(remoteConfig.getInt('title_color')),
-    // Other text style properties from remote config
-  );
+  Color textColor = _hexToColor(remoteConfig.getString('body_text_color'));
 
+  static Color _hexToColor(String hexColor) {
+    return Color(int.parse(hexColor.substring(1, 7), radix: 16) + 0xFF000000);
+  }
 
 }
 
